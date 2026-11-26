@@ -16,7 +16,7 @@
 | Claude Code 等支持 Agent Skills 的工具 | 复制到该工具的技能目录；也可用 `npx skills add <你的用户名>/<仓库名>`，或直接下载本仓库放进技能目录 |
 | 其他 AI | 在获准使用的环境中提供所需文件及 [SKILL.md](SKILL.md)，请它按该工作流处理 |
 
-安装后不需要额外依赖。只有范围核对脚本需要 Python 3.10 或更高版本，仅用标准库，可离线运行。
+使用文字流程不需要额外依赖。范围核对和 Word 目录校验脚本使用 Python 3.10 或更高版本，仅用标准库，可离线运行。
 
 ## 目录结构
 
@@ -35,11 +35,13 @@ references/                 方法与样稿
   sample-request-list.csv     资料目录纯文本版
   sample-report-map.csv       要点与报告位置的对应表
 assets/
-  sample-focused-report.docx  专项报告 Word 示例
+  client-ready-word-example.docx  客户交付版 Word 样稿
+  sample-focused-report.docx  七项范围配套案例的 Word 报告
   report-template.docx       空白 Word 模板
   sample-request-list.xlsx    Excel 填写示例与空白清单
   icon.svg                    图标
 scripts/check_scope.py        核对要点覆盖、占位符与批注的离线脚本
+scripts/check_word_toc.py     比对 Word 目录与最终页码的离线脚本
 tests/                        单元测试与四道复核题
 agents/openai.yaml            部分平台读取的显示信息
 ```
@@ -50,11 +52,12 @@ agents/openai.yaml            部分平台读取的显示信息
 | --- | --- |
 | 按工作范围编资料目录 | [要点表](references/sample-scope.md)和[资料目录 Excel](assets/sample-request-list.xlsx)（[CSV](references/sample-request-list.csv)） |
 | 核对收件、判断由谁补件 | [资料目录与证据台账](references/evidence.md)和[编号示例](references/example.md) |
-| 起草或复核专项尽调报告 | [专项尽调报告 Word](assets/sample-focused-report.docx)及[报告 Markdown](references/sample-focused-report.md) |
+| 起草或复核专项尽调报告 | [客户交付版 Word 样稿](assets/client-ready-word-example.docx)（前言、定义、正文及目录）；核对范围与证据编号看[配套案例 Word](assets/sample-focused-report.docx)或[Markdown](references/sample-focused-report.md) |
 | 收到补件或准备出具报告 | [结论写法示例](references/conclusions.md) |
 | 起草上市尽调报告 | [上市专项虚构示例](references/sample-listing-report.md) |
 | 复核报告语言 | [定稿表述对照](references/drafting-style.md) |
 | 检查报告分章和交付格式 | [报告结构与交付](references/report.md)和[可选报告框架](references/alternative-report-outlines.md) |
+| 定稿后核对 Word 目录页码 | [目录校验步骤](#word-目录交付检查)及[校验脚本](scripts/check_word_toc.py) |
 
 专项尽调的要点表、资料目录和报告使用配套编号。完整版包括空白 Word 模板及 Excel 空白页。案例和数据均为虚构；实际工作时按本项目修改范围、表头、编号和核查期间。
 
