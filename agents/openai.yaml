@@ -1,0 +1,13 @@
+interface:
+  display_name: 怪p法律尽职调查
+  short_description: 从委托范围和要点表生成编号资料目录，核对证据与补件，起草并复核法律尽调报告
+  default_prompt: 用 $guai-p-legal-due-diligence 根据本项目的尽调范围和已收材料，完成当前阶段的尽调工作。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
