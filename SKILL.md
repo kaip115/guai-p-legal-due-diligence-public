@@ -49,4 +49,4 @@ metadata:
 - **上市尽调**。参照[独立虚构案例](references/sample-listing-report.md)的主要发现、合同通知和披露写法。
 - 查漏可读[可选报告框架](references/alternative-report-outlines.md)。实际范围、证据和编号以本项目为准。
 
-- **客户版 Word 版式**。完整版另附 [客户版前言、定义及目录样稿](assets/client-ready-word-example.docx)，是独立虚构案例，仅用于参考报告成品的版式与前言。
+- **客户版 Office 版式**。完整版另附[前言、定义与目录齐全的 Word 样稿](assets/client-ready-word-example.docx)和[七列资料目录 Excel 样表](assets/client-ready-request-list.xlsx)。用于参考交付版式；跟练范围与证据编号时使用上面的七项配套案例。

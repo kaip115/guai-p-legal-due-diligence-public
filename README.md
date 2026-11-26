@@ -38,7 +38,8 @@ assets/
   client-ready-word-example.docx  客户交付版 Word 样稿
   sample-focused-report.docx  七项范围配套案例的 Word 报告
   report-template.docx       空白 Word 模板
-  sample-request-list.xlsx    Excel 填写示例与空白清单
+  client-ready-request-list.xlsx  七列资料目录样表（原表结构与主题版式）
+  sample-request-list.xlsx    七项范围配套案例的 Excel 与空白页
   icon.svg                    图标
 scripts/check_scope.py        核对要点覆盖、占位符与批注的离线脚本
 scripts/check_word_toc.py     比对 Word 目录与最终页码的离线脚本
@@ -50,7 +51,7 @@ agents/openai.yaml            部分平台读取的显示信息
 
 | 手头的工作 | 先看 |
 | --- | --- |
-| 按工作范围编资料目录 | [要点表](references/sample-scope.md)和[资料目录 Excel](assets/sample-request-list.xlsx)（[CSV](references/sample-request-list.csv)） |
+| 按工作范围编资料目录 | [七列资料目录 Excel 样表](assets/client-ready-request-list.xlsx)（正式版式）；跟练七项配套案例看[要点表](references/sample-scope.md)、[案例 Excel](assets/sample-request-list.xlsx)或[CSV](references/sample-request-list.csv) |
 | 核对收件、判断由谁补件 | [资料目录与证据台账](references/evidence.md)和[编号示例](references/example.md) |
 | 起草或复核专项尽调报告 | [客户交付版 Word 样稿](assets/client-ready-word-example.docx)（前言、定义、正文及目录）；核对范围与证据编号看[配套案例 Word](assets/sample-focused-report.docx)或[Markdown](references/sample-focused-report.md) |
 | 收到补件或准备出具报告 | [结论写法示例](references/conclusions.md) |
@@ -59,7 +60,7 @@ agents/openai.yaml            部分平台读取的显示信息
 | 检查报告分章和交付格式 | [报告结构与交付](references/report.md)和[可选报告框架](references/alternative-report-outlines.md) |
 | 定稿后核对 Word 目录页码 | [目录校验步骤](#word-目录交付检查)及[校验脚本](scripts/check_word_toc.py) |
 
-专项尽调的要点表、资料目录和报告使用配套编号。完整版包括空白 Word 模板及 Excel 空白页。案例和数据均为虚构；实际工作时按本项目修改范围、表头、编号和核查期间。
+正式版式的 Word 和 Excel 用于编排时参考。七项配套案例用于跟练流程，它的要点表、资料目录与报告使用同一套编号。仓库另有简版 Word 起草骨架和七项案例的 Excel 空白页。案例和数据均为虚构；实际工作时按本项目确认范围、表头、编号和核查期间。
 
 可以直接对 AI 说："请按 SKILL.md 处理附件。先根据委托范围编资料目录，按主题编号，并在最右列列出对应条项。已有材料请先核对。需要公司确认或补件的，请写明具体事项和原要点条项。"
 
