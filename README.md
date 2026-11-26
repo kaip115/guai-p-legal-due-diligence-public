@@ -1,6 +1,6 @@
 # 怪p法律尽职调查
 
-**公开版 1.74**
+**公开版 1.75**
 
 把法律尽调的委托范围、工作说明或要点表，转成编号资料目录；审阅已收材料、提出补件要求；起草或复核法律尽职调查报告。
 
@@ -99,3 +99,7 @@ python -m unittest discover -s tests -p "test_*.py"
 ## 许可证
 
 MIT License，© 2026 怪p，全文见 [LICENSE](LICENSE)。
+
+### Word 目录交付检查
+
+最终排版后在 Word 更新目录，逐项核对页码。对可提取正文且使用独立阿拉伯数字页脚的终稿，可另用 `pdftotext -layout final.pdf final-layout.txt` 加 `python scripts/check_word_toc.py final.docx final-layout.txt`。脚本不能核对的版式转为 Word 人工核对，不能跳过。

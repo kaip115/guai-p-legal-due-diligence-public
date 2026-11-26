@@ -5,7 +5,7 @@ license: MIT
 compatibility: 需要 Python 3.10+ 运行 scripts/check_scope.py（仅用标准库，可离线）；处理 .docx/.xlsx 样稿时另需相应的 Office 库或工具。
 metadata:
   author: 怪p
-  version: "1.74"
+  version: "1.75"
 ---
 
 # 怪p法律尽职调查
@@ -41,8 +41,12 @@ metadata:
 - 逐项回答委托问题。按[从审阅材料到报告结论](references/conclusions.md)区分已查明事实、公司陈述和仍需判断的问题。补件改变原判断时，替换失去依据的原句，并更新引用该判断的摘要、表格、附件及批注。
 - 起草时参照[报告结构与交付](references/report.md)。核完事实后，按[定稿表述对照](references/drafting-style.md)复核语言。交付前可用 `scripts/check_scope.py` 核对要点覆盖与占位符，用法见[使用说明](README.md#核对范围与报告位置)。
 
+- **Word 定稿门槛**：使用客户版前言、保留前置定义表；中文正文首行缩进两字符。最终排版后更新整个目录或页码并逐项核对，未验证不得作为清洁版交付。按[报告结构与交付](references/report.md#word-交付门槛)执行。
+
 ## 随包参照
 
 - **专项尽调**。按[虚构要点表](references/sample-scope.md)、[资料目录 CSV](references/sample-request-list.csv)、[报告正文](references/sample-focused-report.md)及[内部对应表](references/sample-report-map.csv)顺序查看。完整版另附同案例的可编辑 Word 和 Excel，以及空白 Word 模板。仅能读取文本时，用前述文本示例即可。
 - **上市尽调**。参照[独立虚构案例](references/sample-listing-report.md)的主要发现、合同通知和披露写法。
 - 查漏可读[可选报告框架](references/alternative-report-outlines.md)。实际范围、证据和编号以本项目为准。
+
+- **客户版 Word 版式**。完整版另附 [客户版前言、定义及目录样稿](assets/client-ready-word-example.docx)，是独立虚构案例，仅用于参考报告成品的版式与前言。
